@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Smartschool Zandpoort
+// @name         Smartschool Borders
 // @namespace    http://tampermonkey.net/
 // @version      1.3
 // @description  try to take over the world!
