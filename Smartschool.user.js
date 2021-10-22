@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smartschool Zandpoort
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      1.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://*.smartschool.be/*
@@ -21,5 +21,5 @@
     if     (url.includes('zandpoort'))  color = "Coral"
     else if(url.includes('pitzemburg')) color = "MediumAquamarine"
 
-    document.getElementsByTagName('body')[0].style.border = "5px solid " + color
+    document.getElementsByTagName('body')[0].style.borderTop = "5px solid " + color
 })();
