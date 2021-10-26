@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smartschool Borders
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.5
 // @description  try to take over the world!
 // @author       Hanne Maes
 // @match        https://*.smartschool.be/*
@@ -22,4 +22,14 @@
     else if(url.includes('pitzemburg')) color = "MediumAquamarine"
 
     document.getElementsByTagName('body')[0].style.borderTop = "5px solid " + color
+
+    /* 
+    replace <header with <div><header
+    
+    Dit werkt niet:
+     header::before {
+     content: '<a href="test">test</a>';
+     } 
+     */
+
 })();
