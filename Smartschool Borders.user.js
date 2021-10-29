@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smartschool Borders
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  try to take over the world!
 // @author       Hanne Maes
 // @match        https://*.smartschool.be/*
@@ -49,14 +49,19 @@
     myDiv.id = 'div_id';                         // set its unique ID
     myDiv.innerHTML = `
         <div style="` + myCss + `">
-            <div> <!-- SCHOLEN -->
+        <div>
             <a style="` + myCssA + `" href="https://bazandpoort.smartschool.be/">Zandpoort</a>
             <a style="` + myCssA + `" href="https://bapitzemburg.smartschool.be/">Pitzemburg</a>
-
-         </div><div> <!-- EXTRA -->
+         </div>
+         <div>
             <a style="` + myCssA + `" href="https://drive.google.com/drive/u/0/folders/1AuZJmhj_dJzCn33X3rmpsi9Edi3hf2I1">Drive</a>
+            <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/School-51befb4444e14fa881677da57cfa0e88/">Notion</a>
+        </div>
+        <div>
+            <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/Smartschool-beheer-b71371031d864c61acb53a9936531d0d">Notion Smartschool</a>
             <a style="` + myCssA + `" href="http://lessenrooster.hannemaes.be/">Lessenrooster</a>
         </div>
+     </div>
     `;
 
     // place custom content
