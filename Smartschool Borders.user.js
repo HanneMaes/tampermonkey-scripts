@@ -61,9 +61,6 @@
             <a style="` + myCssA + `" href="http://lessenrooster.hannemaes.be/">Lessenrooster</a>
             <a style="` + myCssA + `" href="https://github.com/HanneMaes/tampermonkey-scripts/blob/main/Smartschool%20Borders.user.js">2.2</a>
         </div>
-        <div>
-            2.2
-        </div>
      </div>
     `;
 
