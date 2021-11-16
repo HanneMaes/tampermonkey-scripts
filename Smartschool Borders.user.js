@@ -55,10 +55,11 @@
          <div>
             <a style="` + myCssA + `" href="https://drive.google.com/drive/u/0/folders/1AuZJmhj_dJzCn33X3rmpsi9Edi3hf2I1">Drive</a>
             <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/School-51befb4444e14fa881677da57cfa0e88/">Notion</a>
+            <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/Smartschool-beheer-b71371031d864c61acb53a9936531d0d">Notion Smartschool</a>
         </div>
         <div>
-            <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/Smartschool-beheer-b71371031d864c61acb53a9936531d0d">Notion Smartschool</a>
             <a style="` + myCssA + `" href="http://lessenrooster.hannemaes.be/">Lessenrooster</a>
+            <a style="` + myCssA + `" href="https://calendar.google.com/calendar/u/1/r">Calendar</a>
             <a style="` + myCssA + `" href="https://github.com/HanneMaes/tampermonkey-scripts/blob/main/Smartschool%20Borders.user.js">2.2</a>
         </div>
      </div>
