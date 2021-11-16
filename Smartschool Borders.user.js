@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smartschool Borders
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.2
 // @description  try to take over the world!
 // @author       Hanne Maes
 // @match        https://*.smartschool.be/*
@@ -32,7 +32,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
         background-color:` + color + `;
         font-weight: bold;
     `;
@@ -60,6 +59,9 @@
         <div>
             <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/Smartschool-beheer-b71371031d864c61acb53a9936531d0d">Notion Smartschool</a>
             <a style="` + myCssA + `" href="http://lessenrooster.hannemaes.be/">Lessenrooster</a>
+        </div>
+        <div>
+            2.2
         </div>
      </div>
     `;
