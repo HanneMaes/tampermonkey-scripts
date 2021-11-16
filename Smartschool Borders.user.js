@@ -59,6 +59,7 @@
         <div>
             <a style="` + myCssA + `" href="https://www.notion.so/hannemaes/Smartschool-beheer-b71371031d864c61acb53a9936531d0d">Notion Smartschool</a>
             <a style="` + myCssA + `" href="http://lessenrooster.hannemaes.be/">Lessenrooster</a>
+            <a style="` + myCssA + `" href="https://github.com/HanneMaes/tampermonkey-scripts/blob/main/Smartschool%20Borders.user.js">2.2</a>
         </div>
         <div>
             2.2
