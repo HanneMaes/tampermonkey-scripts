@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smooth Surfing: Todoist
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Todoist: auto scroll down
 // @author       Hanne Maes
 // @match        https://todoist.com/*
