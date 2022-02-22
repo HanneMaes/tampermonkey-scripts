@@ -17,7 +17,7 @@
     // wait & scroll down
     setTimeout(function() {
         console.log('Smooth Surfing: Scroll down')
-        window.scrollTo(0, document.body.scrollHeight)
+        window.scrollTo(0, document.body.offsetHeight);
     }, 2000);
 
 })();
