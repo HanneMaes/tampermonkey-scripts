@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Smooth Surfing: Todoist
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Todoist: auto scroll down
 // @author       Hanne Maes
 // @match        https://todoist.com/*
@@ -15,9 +15,11 @@
     console.log('Smooth Surfing: Todoist')
 
     // wait & scroll down
-    setTimeout(function() {
-        console.log('Smooth Surfing: Scroll down')
-        window.scrollTo(0, document.body.offsetHeight);
-    }, 2000);
+    window.onload = function(){
+        setTimeout(() => {
+            window.scrollTo(0, document.body.offsetHeight);
+            console.log("You've reached the bottom!");
+        }, 3000);
+     };
 
 })();
