@@ -72,7 +72,7 @@
         // if it's not a link to the search engine itself and not an empty link
         if(!(links[i].href.includes(searchEngine)) && links[i].href != "") {
 
-            // don't include news cards and deeps links (links withing the site of a search result)
+            // brave: don't include news cards and deeps links (links withing the site of a search result)
             if( !links[i].classList.contains('card') && !links[i].classList.contains('deep-link') ) {
 
                // put valid results in array
@@ -103,7 +103,8 @@
     // do this when a key is pressed
     document.addEventListener('keypress', logKey);
     function logKey(e) {
-        window.location.href = searchResults[e.key-1].href
+        //console.log('Search Engine Shortcuts: ' + searchEngine + ' detected')
+        window.location.href = searchResults[e.key].href
     }
 
 })();
