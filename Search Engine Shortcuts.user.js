@@ -5,6 +5,7 @@
 // @description  try to take over the world!
 // @author       Hanne Maes
 // @match        https://www.google.com/*
+// @match        https://search.brave.com/*
 // @icon         https://raw.githubusercontent.com/HanneMaes/google-search-shortcuts-addon/master/src/icons/icon-small.png
 // @grant        none
 // ==/UserScript==
@@ -12,9 +13,13 @@
 (function() {
     'use strict';
 
-    console.log('Search Engine Shortcuts: Google detected')
-
     var searchResults = []
+
+    // what search engine are we on
+    var url = window.location.href
+    var searchEngine = 'google.com/search'
+    if(url.includes('brave')) searchEngine = 'search.brave'
+    console.log('Search Engine Shortcuts: ' + searchEngine + ' detected')
 
     // add the styling to the page
     document.head.innerHTML = document.head.innerHTML + `
@@ -28,7 +33,7 @@
   .googleSearchResultsShortcut {
     /* positioning */
     position: absolute;
-    right: 20px;
+    right: 40px;
     top: 0px;
     /* size */
     width: 20px;
@@ -64,24 +69,30 @@
     var links = document.querySelectorAll('a');
     for(var i = 0; i < links.length; i++){
 
-        // if it's not a link to google and not an empty link
-        if(!(links[i].href.includes('google')) && links[i].href != "") {
+        // if it's not a link to the search engine itself and not an empty link
+        if(!(links[i].href.includes(searchEngine)) && links[i].href != "") {
 
-            searchResults.push({
-            html: links[i],      // get the search result HTML code so I can inject the shortcut icons
-            href: links[i].href, // get the search result HREF so I can bind a shortcut to the link
-        })
+            // don't include news cards and deeps links (links withing the site of a search result)
+            if( !links[i].classList.contains('card') && !links[i].classList.contains('deep-link') ) {
+
+               // put valid results in array
+               searchResults.push({
+                   html: links[i],      // get the search result HTML code so I can inject the shortcut icons
+                   href: links[i].href, // get the search result HREF so I can bind a shortcut to the link
+               })
+            }
         }
     }
+    console.log('Search Engine Shortcuts: searchResults ', searchResults)
 
     // display the shortcut graphics
     var i = 0
     for (var i in searchResults) {
-        if (i<9) { // only display the first 9 items
+        if (i < 10) { // only display the first 10 items
 
             searchResults[i].html.innerHTML = `
       <div style="position: relative; width: 0; height: 0; overfow: visible;">
-        <div class="googleSearchResultsShortcut">` + parseInt(parseInt(i, 10) + 1, 10) + `</div>
+        <div class="googleSearchResultsShortcut">` + parseInt(parseInt(i, 10), 10) + `</div>
       </div>
     ` + searchResults[i].html.innerHTML
             //console.log('- searchResults[i].html.innerHTML:', searchResults[i].html.innerHTML)
