@@ -32,9 +32,9 @@
     rectangle.style.border = '2px solid red'; // Rectangle border color
     rectangle.style.backgroundColor = 'rgba(255, 0, 0, 0.2)'; // Rectangle fill color with transparency
     rectangle.style.left = '70px'; // X-coordinate of the top-left corner of the rectangle
-    rectangle.style.top = '120px'; // Y-coordinate of the top-left corner of the rectangle
-    rectangle.style.width = '200px'; // Width of the rectangle
-    rectangle.style.height = '50px'; // Height of the rectangle
+    rectangle.style.top = '140px'; // Y-coordinate of the top-left corner of the rectangle
+    rectangle.style.width = '100px'; // Width of the rectangle
+    rectangle.style.height = '100px'; // Height of the rectangle
 
     // generate text
 
