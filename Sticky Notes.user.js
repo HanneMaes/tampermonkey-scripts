@@ -22,9 +22,14 @@
     // mondag
     if(today.getDay() === 1) {
         textArray.push('LESUUR 1');
-        textArray.push('  Alae = Alé');
-        textArray.push('  Albarea = Albaré');
+        textArray.push('  Alae = alé');
+        textArray.push('  Albarea = albaré');
+    } else if(today.getDay() === 4) {
+        textArray.push('LESUUR 1');
+        textArray.push('  Israe = iSra');
+        textArray.push('  Christian = kristiAAn');
     }
+
 
     // sticky note styling
     var rectangle = document.createElement('div');
@@ -33,7 +38,7 @@
     rectangle.style.backgroundColor = 'rgba(255, 0, 0, 0.2)'; // Rectangle fill color with transparency
     rectangle.style.left = '70px'; // X-coordinate of the top-left corner of the rectangle
     rectangle.style.top = '140px'; // Y-coordinate of the top-left corner of the rectangle
-    rectangle.style.width = '100px'; // Width of the rectangle
+    rectangle.style.width = '130px'; // Width of the rectangle
     rectangle.style.height = '100px'; // Height of the rectangle
 
     // generate text
