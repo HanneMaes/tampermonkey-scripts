@@ -24,12 +24,16 @@
         textArray.push('LESUUR 1');
         textArray.push('  Alae = alé');
         textArray.push('  Albarea = albaré');
+    // tuesday & wednesday
+    } else if(today.getDay() === 2 || today.getDay() === 3) {
+        textArray.push('LESUUR 1');
+        textArray.push('  Douae = DoeA');
+    // thursday
     } else if(today.getDay() === 4) {
         textArray.push('LESUUR 1');
         textArray.push('  Israe = iSra');
         textArray.push('  Christian = kristiAAn');
     }
-
 
     // sticky note styling
     var rectangle = document.createElement('div');
